@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Mobility Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div id="loginPage">
+            <h2>Smart Mobility Tracker</h2>
+            <div class="form-container">
+                <form id="loginForm" onsubmit="return handleLoginSubmit(event)">
+                    <div class="form-header">
+                        <h3>Login</h3>
+                    </div>
+                    <input type="email" id="loginEmail" placeholder="Enter email" required>
+                    <input type="password" id="loginPassword" placeholder="Enter password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Journey Form (Start Location to End Location) -->
+        <div id="journeyPage" style="display:none;">
+            <h2>Smart Mobility Tracker</h2>
+            <div class="form-container">
+                <form id="locationForm" onsubmit="return handleLocationSubmit(event)">
+                    <h3>Enter Your Journey</h3>
+
+                    <!-- Start Location -->
+                    <label for="startLocation">Start Location:</label>
+                    <input type="text" id="startLocation" placeholder="Enter start location" required>
+
+                    <!-- End Location -->
+                    <label for="endLocation">End Location:</label>
+                    <input type="text" id="endLocation" placeholder="Enter end location" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+
+                <div id="responseMessage" style="display:none; margin-top: 20px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
